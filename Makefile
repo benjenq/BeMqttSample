@@ -4,7 +4,7 @@ UNAME_S := $(shell uname -s)
 ifeq ($(UNAME_S),Darwin)
     CXX_FLAGS := -Wall -Wextra -std=c++17 -ggdb -lpaho-mqtt3cs -lpaho-mqtt3as -lstdc++ -lpaho-mqttpp3 #-lpthread -lm /usr/local/lib/libpaho-mqttpp3.so.1.1.0 #-lpaho-mqttpp3
 else
-    CXX_FLAGS := -Wall -Wextra -std=c++17 -ggdb -luuid -lpaho-mqtt3cs -lpaho-mqtt3as -lstdc++ -lpaho-mqttpp3 #-lpthread -lm /usr/local/lib/libpaho-mqttpp3.so.1.1.0 #-lpaho-mqttpp3
+    CXX_FLAGS := -Wall -Wextra -std=c++17 -ggdb -lpaho-mqtt3cs -lpaho-mqtt3as -lstdc++ -lpaho-mqttpp3 #-lpthread -lm /usr/local/lib/libpaho-mqttpp3.so.1.1.0 #-lpaho-mqttpp3
 endif
 
 BIN		:= bin
