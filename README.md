@@ -31,7 +31,7 @@ sudo ldconfig
 3. **`make run`** in console to complie & launch your code.
 4. **(Optinal*)** Recommand to open this project via [Microsoft Visual Studio Code](https://code.visualstudio.com/download) because this project was configured for this IDE tool.
 
-###Sample Code:
+### Sample Code:
 ```cpp
 #include <iostream>
 #include "../include/BeMqttClient.h"
