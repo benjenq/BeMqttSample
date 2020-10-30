@@ -1,5 +1,5 @@
-## MQTT client for c++ Sample (BeMqttClient)<br>
-##### A customize MQTT Client for C++ based on Paho.mqtt.cpp. Tested on macOS & Linux #####
+# MQTT client for c++ Sample (BeMqttClient)<br>
+A customize MQTT Client for C++ based on Paho.mqtt.cpp. Tested on macOS & Linux & Windows
 
 **Feature:**
 - Class **`BeMqttClient.h`** implemented from `mqtt/async_client`. More easy to use.
@@ -8,6 +8,7 @@
 - [paho.mqtt.c](https://github.com/eclipse/paho.mqtt.c) : Eclipse Paho C Client Library for the MQTT Protocol
 - [paho.mqtt.cpp](https://github.com/eclipse/paho.mqtt.c) : Eclipse Paho MQTT C++ Client Library<br>
 
+###For Ubuntu / Debian (Linux)
 Install script:
 ```shell
 sudo apt install git build-essential gcc make cmake cmake-gui cmake-curses-gui libssl-dev doxygen graphviz libcppunit-dev -y
@@ -19,14 +20,18 @@ cmake -Bbuild -H. -DPAHO_BUILD_DOCUMENTATION=TRUE -DPAHO_BUILD_SAMPLES=FALSE
 sudo cmake --build build/ --target install
 sudo ldconfig
 ```
-
-**How to use:**
+###For Windows 
+1. Install [CMake (GUI)](https://cmake.org/download/), [MinGW-w64](https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win32/Personal%20Builds/mingw-builds/installer/mingw-w64-install.exe/download),[OpenSSL](https://slproweb.com/products/Win32OpenSSL.html), and add `[installed]/bin` to `PATH` parameter.
+2. Install Eclipse Paho C/C++ Client Library via CMake,
+3. Put `include\*.* | lib\*.*` into `[MinGW-w64 insatlled]/ include | lib` directories.
+- *TODO:* Detail step of 1.2.3...
+###How to use:
 1. Put your code file(s) `.cpp`  in **`src/`** directory.
 2. Just add `#include <BeMqttClient.h>` or  `#include "../include/BeMqttClient.h"`
 3. **`make run`** in console to complie & launch your code.
 4. **(Optinal*)** Recommand to open this project via [Microsoft Visual Studio Code](https://code.visualstudio.com/download) because this project was configured for this IDE tool.
 
-**Sample Code:**
+###Sample Code:
 ```cpp
 #include <iostream>
 #include "../include/BeMqttClient.h"
