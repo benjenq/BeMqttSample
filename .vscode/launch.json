@@ -6,7 +6,7 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/bin/main",
-            "preLaunchTask": "Build C++ project (Linux)",
+            "preLaunchTask": "Build C++ project",
             "args": [],
             "stopAtEntry": true,
             "cwd": "${workspaceFolder}",
@@ -41,7 +41,7 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "Build C++ project (Windows)"
+            "preLaunchTask": "Build C++ project"
         }
     ]
 }
