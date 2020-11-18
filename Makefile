@@ -9,7 +9,7 @@ LIBRARIES	:=
 EXECUTABLE	:= main
 
 ifeq ($(OS),Windows_NT)
-    CXX_FLAGS  := -Wall -Wextra -std=c++17 -ggdb -lpaho-mqtt3cs -lpaho-mqtt3as -lstdc++ -lpaho-mqttpp3
+    CXX_FLAGS  := -Wall -Wextra -std=c++17 -ggdb -lstdc++ -lpaho-mqttpp3 -lpaho-mqtt3a
 	RM_COMMAND := del $(BIN)\*.* /s /q
 	CLEAN_CMD  := cls
 else
@@ -17,9 +17,9 @@ else
 	RM_COMMAND := -rm -R $(BIN)/*
 	CLEAN_CMD  := clear
 	ifeq ($(UNAME_S),Darwin)
-        CXX_FLAGS := -Wall -Wextra -std=c++17 -ggdb -lpaho-mqtt3cs -lpaho-mqtt3as -lstdc++ -lpaho-mqttpp3 #-lpthread -lm /usr/local/lib/libpaho-mqttpp3.so.1.1.0
+        CXX_FLAGS := -Wall -Wextra -std=c++17 -ggdb -lstdc++ -lpaho-mqttpp3 -lpaho-mqtt3a #-lpthread -lm /usr/local/lib/libpaho-mqttpp3.so.1.1.0
     else
-        CXX_FLAGS := -Wall -Wextra -std=c++17 -ggdb -lpaho-mqtt3cs -lpaho-mqtt3as -lstdc++ -lpaho-mqttpp3 #-lpthread -lm /usr/local/lib/libpaho-mqttpp3.so.1.1.0
+        CXX_FLAGS := -Wall -Wextra -std=c++17 -ggdb -lstdc++ -lpaho-mqttpp3 -lpaho-mqtt3a #-lpthread -lm /usr/local/lib/libpaho-mqttpp3.so.1.1.0
     endif
 endif
 
